@@ -18,7 +18,7 @@ var a = 10;
 const b = 11;
 const string = "hello";
 document.write(a);
-document.write("<br>");
+document.write("<br>");  
 document.write(b);
 document.write("<br>");
 document.write(string);
@@ -528,3 +528,43 @@ function tes (y){
   return y.FristName + " " + y.lastName;
 }
 console.log(bj.toString());
+
+// some function 
+var some = [10,15,18,25];
+var somee = some.some((f) => f>=18);
+console.log(somee);
+
+// every function
+var somm = some.every((d) => d >=18); 
+console.log(somm);
+
+// find function 
+var find = [10,15,18,22];
+var finds = find.find(finn);
+
+function finn (g){
+  return g >= 18;
+}
+console.log(finds);
+
+// findindex function 
+var findi = [10,15,18,22];
+console.log(findi.findIndex( (f) => f>=18)); 
+
+// break
+var te = "";
+for(var i=0; i <= 7 ; i++){
+  if(i == 4) {break;}
+  te +=  i;
+};
+
+console.log(te);
+
+// continu 
+var te = "";
+for(var i=0; i <= 7 ; i++){
+  if(i == 4) {continue;}
+  te +=  i;
+};
+
+console.log(te);
