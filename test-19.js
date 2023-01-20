@@ -140,3 +140,18 @@ const mycars = new car("Ford",2014);
 const mycar = new car("tata",2015);
 var vr = ("my car name is " + mycar.name + " and models years " + mycar.year);
 document.getElementById("clas").innerHTML = vr ;
+
+//promise
+const myPromise = new Promise(function(myResolve, myReject) {
+  setTimeout(function(){ myResolve("Good Morning"),myReject("error"); }, 2000);
+});
+myPromise.then(function(value){
+document.getElementById("Promis").innerHTML = value;
+});
+
+// String.includes
+let text = "Hello world, welcome to the universe.";
+document.getElementById("includes").innerHTML = text.includes("world");
+
+// String.startsWith()
+document.getElementById("startsWith").innerHTML = text.startsWith("hello");
