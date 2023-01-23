@@ -35,17 +35,28 @@
                     <div class="modal-body">
                         <p>Task Title</p>
                         <input type="text" class="form-control" id="textInput">
-                        <div id="msg" class="text-danger"></div>
+                        <div id="msg_titel" class="text-danger"></div>
 
+                        <p class="mt-3">Enter Email</p>
+                        <input type="email" name="" id="emailInput" class="form-control">
+                        <div id="msg_email" class="text-danger"></div>
+
+                        
+                        <p class="mt-3">Enter Phone Number</p>
+                        <input type="text" name="" id="phoneInput" class="form-control">
+                        <div id="msg_number" class="text-danger"></div>
+
+                        
                         <p class="mt-3">Due Date</p>
                         <input type="date" class="form-control" id="dateInput">
 
                         <p class="mt-3">Description</p>
                         <textarea name="" id="textarea" cols="30" rows="10" class="form-control"></textarea>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
-                        <button type="submit" class="btn btn-primary"> Add </button>
+                        <button type="submit" id="add" class="btn btn-primary"> Add </button>
                     </div>
                 </div>
             </div>
@@ -54,20 +65,24 @@
         <div id="tasks">
             <div>
                 <span class="fw-bold">Task1</span>
+                <span>patel@gmail.com</span>
+                <span>8511335098</span>
                 <span class="small">2022-2-20</span>
                 <p>Learn javascript</p>
                 <span class="options d-flex justify-content-center">
-                    <i class="fa-solid fa-user-pen pe-2"></i>
-                    <i class="fa-sharp fa-solid fa-trash"></i>
+                    <i onClick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-user-pen pe-2"></i>
+                    <i onClick = "deleteTask(this)" class="fa-sharp fa-solid fa-trash"></i>
                 </span>
             </div>
             <div>
                 <span class="fw-bold">Task2</span>
+                <span>dpatel@gmail.com</span>
+                <span>9909224875</span>
                 <span class="small">2022-2-20</span>
                 <p>Learn javascript</p>
                 <span class="options d-flex justify-content-center">
-                    <i class="fa-solid fa-user-pen pe-2"></i>
-                    <i class="fa-sharp fa-solid fa-trash"></i>
+                    <i onClick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-user-pen pe-2"></i>
+                    <i onClick = "deleteTask(this)" class="fa-sharp fa-solid fa-trash"></i>
                 </span>
             </div>
         </div>
